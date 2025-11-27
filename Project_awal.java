@@ -24,11 +24,13 @@ public class Project_awal {
         System.out.println("1. Panjang/Jarak");
         System.out.println("2. Massa");
         System.out.println("3. Mata Uang");
-        System.out.print("Input Pilihan 1-5 : ");
+        System.out.println("4. Fitur Tambahan");
+        System.out.print("Input Pilihan 1-4 : ");
         pilih = Integer.parseInt(ip.readLine());
         
         switch (pilih){
             case 1:
+                System.out.println("");
                 System.out.println("======= Konversi Panjang/Jarak =======");
                 String[] unit = {"Km","Hm","Dam","m","Dm","Cm","Mm"};
 
@@ -300,6 +302,8 @@ public class Project_awal {
                     }
                 break;
             case 2:
+                
+                System.out.println("");
                 System.out.println("======= Konversi Massa =======");
                 String[] unit2 = {"Kg","Hg","Dag","g","Dg","Cg","Mg"};
 
@@ -571,6 +575,7 @@ public class Project_awal {
                     }
                 break;
             case 3:
+                    System.out.println("");
                     System.out.println("===== Konversi Mata Uang =====");
                     System.out.println("1. Rupiah");
                     System.out.println("2. US Dollar");
@@ -636,6 +641,239 @@ public class Project_awal {
                 }
                 else {System.out.println("Input Tidak Tersedia");}
                 break;
+                
+            case 4:
+                int menu;
+                    System.out.println("");
+                    System.out.println("          FITUR TAMBAHAN");
+        System.out.println("1. Penghitung Keliling");
+        System.out.println("2. Penghitung Luas");
+        System.out.println("3. Penghitung Volume");
+        System.out.print("Input Pilihan 1-3 : ");
+        menu = Integer.parseInt(ip.readLine());
+        if (menu == 1) {
+            System.out.println("\n--- PILIH BANGUN KELILING ---");
+            System.out.println("1. Persegi");
+            System.out.println("2. Persegi Panjang");
+            System.out.println("3. Segitiga");
+            System.out.println("4. Lingkaran");
+            System.out.println("5. Jajar Genjang");
+            System.out.println("6. Belah Ketupat");
+            System.out.println("7. Trapesium");
+            System.out.print("Pilih: ");
+            pilih = Integer.parseInt(ip.readLine());
+
+            System.out.print("Berapa banyak perhitungan? ");
+            int jumlah = Integer.parseInt(ip.readLine());
+
+            for (int i = 1; i <= jumlah; i++) {
+                System.out.println("\nPerhitungan ke-" + i);
+
+                if (pilih == 1) {
+                    System.out.print("Masukkan sisi: ");
+                    double s = Double.parseDouble(ip.readLine());
+                    System.out.println("Keliling = " + (4 * s));
+                } 
+                else if (pilih == 2) {
+                    System.out.print("Panjang: ");
+                    double p = Double.parseDouble(ip.readLine());
+                    System.out.print("Lebar: ");
+                    double l = Double.parseDouble(ip.readLine());
+                    System.out.println("Keliling = " + (2 * (p + l)));
+                }
+                else if (pilih == 3) {
+                    System.out.print("Sisi 1: ");
+                    double a = Double.parseDouble(ip.readLine());
+                    System.out.print("Sisi 2: ");
+                    double b = Double.parseDouble(ip.readLine());
+                    System.out.print("Sisi 3: ");
+                    double c = Double.parseDouble(ip.readLine());
+                    System.out.println("Keliling = " + (a + b + c));
+                }
+                else if (pilih == 4) {
+                    System.out.print("Masukkan jari-jari: ");
+                    double r = Double.parseDouble(ip.readLine());
+                    System.out.println("Keliling = " + (2 * Math.PI * r));
+                }
+                else if (pilih == 5) {
+                    System.out.print("Sisi sejajar 1: ");
+                    double a = Double.parseDouble(ip.readLine());
+                    System.out.print("Sisi sejajar 2: ");
+                    double b = Double.parseDouble(ip.readLine());
+                    System.out.println("Keliling = " + 2 * (a + b));
+                }
+                else if (pilih == 6) {
+                    System.out.print("Masukkan sisi belah ketupat: ");
+                    double s = Double.parseDouble(ip.readLine());
+                    System.out.println("Keliling = " + (4 * s));
+                }
+                else if (pilih == 7) {
+                    System.out.print("Sisi 1: ");
+                    double a = Double.parseDouble(ip.readLine());
+                    System.out.print("Sisi 2: ");
+                    double b = Double.parseDouble(ip.readLine());
+                    System.out.print("Sisi 3: ");
+                    double c = Double.parseDouble(ip.readLine());
+                    System.out.print("Sisi 4: ");
+                    double d = Double.parseDouble(ip.readLine());
+                    System.out.println("Keliling = " + (a + b + c + d));
+                }
+            }
+        }
+
+        else if (menu == 2) {
+            System.out.println("\n--- PILIH BANGUN LUAS ---");
+            System.out.println("1. Persegi");
+            System.out.println("2. Persegi Panjang");
+            System.out.println("3. Segitiga");
+            System.out.println("4. Lingkaran");
+            System.out.println("5. Jajar Genjang");
+            System.out.println("6. Trapesium");
+            System.out.println("7. Belah Ketupat");
+            System.out.println("8. Layang-layang");
+            System.out.print("Pilih: ");
+            pilih = Integer.parseInt(ip.readLine());
+
+            System.out.print("Berapa banyak perhitungan? ");
+            int jumlah = Integer.parseInt(ip.readLine());
+
+            for (int i = 1; i <= jumlah; i++) {
+                System.out.println("\nPerhitungan ke-" + i);
+
+                if (pilih == 1) {
+                    System.out.print("Sisi: ");
+                    double s = Double.parseDouble(ip.readLine());
+                    System.out.println("Luas = " + (s * s));
+                }
+                else if (pilih == 2) {
+                    System.out.print("Panjang: ");
+                    double p = Double.parseDouble(ip.readLine());
+                    System.out.print("Lebar: ");
+                    double l = Double.parseDouble(ip.readLine());
+                    System.out.println("Luas = " + (p * l));
+                }
+                else if (pilih == 3) {
+                    System.out.print("Alas: ");
+                    double a = Double.parseDouble(ip.readLine());
+                    System.out.print("Tinggi: ");
+                    double t = Double.parseDouble(ip.readLine());
+                    System.out.println("Luas = " + (0.5 * a * t));
+                }
+                else if (pilih == 4) {
+                    System.out.print("Jari-jari: ");
+                    double r = Double.parseDouble(ip.readLine());
+                    System.out.println("Luas = " + (Math.PI * r * r));
+                }
+                else if (pilih == 5) {
+                    System.out.print("Alas: ");
+                    double a = Double.parseDouble(ip.readLine());
+                    System.out.print("Tinggi: ");
+                    double t = Double.parseDouble(ip.readLine());
+                    System.out.println("Luas = " + (a * t));
+                }
+                else if (pilih == 6) {
+                    System.out.print("Sisi sejajar 1: ");
+                    double a = Double.parseDouble(ip.readLine());
+                    System.out.print("Sisi sejajar 2: ");
+                    double b = Double.parseDouble(ip.readLine());
+                    System.out.print("Tinggi: ");
+                    double t = Double.parseDouble(ip.readLine());
+                    System.out.println("Luas = " + (0.5 * (a + b) * t));
+                }
+                else if (pilih == 7) {
+                    System.out.print("Diagonal 1: ");
+                    double d1 = Double.parseDouble(ip.readLine());
+                    System.out.print("Diagonal 2: ");
+                    double d2 = Double.parseDouble(ip.readLine());
+                    System.out.println("Luas = " + (0.5 * d1 * d2));
+                }
+                else if (pilih == 8) {
+                    System.out.print("Diagonal 1: ");
+                    double d1 = Double.parseDouble(ip.readLine());
+                    System.out.print("Diagonal 2: ");
+                    double d2 = Double.parseDouble(ip.readLine());
+                    System.out.println("Luas = " + (0.5 * d1 * d2));
+                }
+            }
+        }
+
+        else if (menu == 3) {
+            // ======================= VOLUME ==========================
+            System.out.println("\n--- PILIH BANGUN VOLUME ---");
+            System.out.println("1. Kubus");
+            System.out.println("2. Balok");
+            System.out.println("3. Tabung");
+            System.out.println("4. Kerucut");
+            System.out.println("5. Prisma Segitiga");
+            System.out.println("6. Limas Segiempat");
+            System.out.println("7. Bola");
+            System.out.print("Pilih: ");
+            pilih = Integer.parseInt(ip.readLine());
+
+            System.out.print("Berapa banyak perhitungan? ");
+            int jumlah = Integer.parseInt(ip.readLine());
+
+            for (int i = 1; i <= jumlah; i++) {
+                System.out.println("\nPerhitungan ke-" + i);
+
+                if (pilih == 1) {
+                    System.out.print("Sisi: ");
+                    double s = Double.parseDouble(ip.readLine());
+                    System.out.println("Volume = " + (s * s * s));
+                }
+                else if (pilih == 2) {
+                    System.out.print("Panjang: ");
+                    double p = Double.parseDouble(ip.readLine());
+                    System.out.print("Lebar: ");
+                    double l = Double.parseDouble(ip.readLine());
+                    System.out.print("Tinggi: ");
+                    double t = Double.parseDouble(ip.readLine());
+                    System.out.println("Volume = " + (p * l * t));
+                }
+                else if (pilih == 3) {
+                    System.out.print("Jari-jari: ");
+                    double r = Double.parseDouble(ip.readLine());
+                    System.out.print("Tinggi: ");
+                    double t = Double.parseDouble(ip.readLine());
+                    System.out.println("Volume = " + (Math.PI * r * r * t));
+                }
+                else if (pilih == 4) {
+                    System.out.print("Jari-jari: ");
+                    double r = Double.parseDouble(ip.readLine());
+                    System.out.print("Tinggi: ");
+                    double t = Double.parseDouble(ip.readLine());
+                    System.out.println("Volume = " + ((Math.PI * r * r * t) / 3));
+                }
+                else if (pilih == 5) {
+                    System.out.print("Alas segitiga: ");
+                    double a = Double.parseDouble(ip.readLine());
+                    System.out.print("Tinggi segitiga: ");
+                    double ts = Double.parseDouble(ip.readLine());
+                    System.out.print("Tinggi prisma: ");
+                    double tp = Double.parseDouble(ip.readLine());
+                    double luasAlas = 0.5 * a * ts;
+                    System.out.println("Volume = " + (luasAlas * tp));
+                }
+                else if (pilih == 6) {
+                    System.out.print("Panjang alas: ");
+                    double p = Double.parseDouble(ip.readLine());
+                    System.out.print("Lebar alas: ");
+                    double l = Double.parseDouble(ip.readLine());
+                    System.out.print("Tinggi limas: ");
+                    double t = Double.parseDouble(ip.readLine());
+                    System.out.println("Volume = " + ((p * l * t) / 3));
+                }
+                else if (pilih == 7) {
+                    System.out.print("Jari-jari: ");
+                    double r = Double.parseDouble(ip.readLine());
+                    System.out.println("Volume = " + ((4.0 / 3.0) * Math.PI * r * r * r));
+                }
+            }
+        }
+
+        else {
+            System.out.println("Menu tidak valid!");
+        }
                 }       
         }
         catch(Exception ie) {
