@@ -718,6 +718,9 @@ public class Project_awal {
                     double d = Double.parseDouble(ip.readLine());
                     System.out.println("Keliling = " + (a + b + c + d));
                 }
+                 else {
+                        System.out.println("Input Tidak Tersedia");
+                    }
             }
         }
 
@@ -794,11 +797,13 @@ public class Project_awal {
                     double d2 = Double.parseDouble(ip.readLine());
                     System.out.println("Luas = " + (0.5 * d1 * d2));
                 }
+                 else {
+                        System.out.println("Input Tidak Tersedia");
+                    }
             }
         }
 
         else if (menu == 3) {
-            // ======================= VOLUME ==========================
             System.out.println("\n--- PILIH BANGUN VOLUME ---");
             System.out.println("1. Kubus");
             System.out.println("2. Balok");
@@ -868,6 +873,9 @@ public class Project_awal {
                     double r = Double.parseDouble(ip.readLine());
                     System.out.println("Volume = " + ((4.0 / 3.0) * Math.PI * r * r * r));
                 }
+                 else {
+                        System.out.println("Input Tidak Tersedia");
+                    }
             }
         }
 
@@ -890,3 +898,4 @@ public class Project_awal {
     }
 }
 }
+
